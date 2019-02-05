@@ -1,5 +1,8 @@
 function createMenuData(data) {
-
+  var array = data.map(function(a) {
+      var spl = a.split('/');
+      console.log(spl);
+  });
 }
 
 describe("menu Data Generator", () => {
@@ -14,7 +17,7 @@ describe("menu Data Generator", () => {
         "parent3/parent3child1",
         "parent4"
       ];
-  
+
       const expectedResult = [
         {
           title: "parent1",
@@ -23,7 +26,7 @@ describe("menu Data Generator", () => {
         { title: "parent2", data: ["parent2child", "parent2child2"] },
         { title: "parent3", data: ["parent3child1"] }
       ];
-  
+
       const actualResult = createMenuData(data);
       expect(actualResult).toMatchObject(expectedResult);
     });
