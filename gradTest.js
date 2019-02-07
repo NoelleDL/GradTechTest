@@ -1,6 +1,9 @@
+/*jshint esversion: 6 */
 function createMenuData(data) {
-  data.map(function(a) {
-      var spl = a.split('/');
-      console.log(spl);
-  });
+  var array = [];
+  for (let i = 0; i < data.length; i++) {
+    array.push(data[i].split('/'));
+
+  }
+  return array;
 }
