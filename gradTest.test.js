@@ -1,8 +1,5 @@
 function createMenuData(data) {
-  var array = data.map(function(a) {
-      var spl = a.split('/');
-      console.log(spl);
-  });
+  
 }
 
 describe("menu Data Generator", () => {
