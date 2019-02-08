@@ -3,7 +3,7 @@ function createMenuData(data) {
 
   var parents = [];
   var children = [];
-  var arrayOfObjects = [];
+  var array_of_objectsf = [];
 
   data.forEach(function(a) {
     var split_strings  = a.split("/");
@@ -18,7 +18,7 @@ function createMenuData(data) {
     var object = {};
     object.title = p;
     object.data = children.filter(c => c.includes(p));
-    arrayOfObjects.push(object);
+    array_of_objectsfObjects.push(object);
   });
-  return arrayOfObjects
+  return array_of_objects;
 }
